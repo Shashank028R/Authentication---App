@@ -29,7 +29,7 @@ const Login = () => {
     }
 
     try {
-      const res = await fetch("https://authentication-app-api-rouge.vercel.app/login", { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Login) });
+      const res = await fetch("https://authentication-app-api-rouge.vercel.app/auth/login", { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Login) });
       const result = await res.json();
       console.log(result);
       const { success, message, jwtToken, name, error } = result;
