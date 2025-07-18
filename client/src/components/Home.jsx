@@ -23,7 +23,7 @@ const Home = () => {
   const fetchProducts = async () => {
     try {
       const headers = { headers: {'Authorization': localStorage.getItem('token')}}
-      const res = await fetch("http://localhost:8000/product", headers)
+      const res = await fetch("https://authentication-app-api-rouge.vercel.app/product", headers)
       const result = await res.json();
       console.log(result)
       setProducts(result)
