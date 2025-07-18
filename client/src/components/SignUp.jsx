@@ -29,7 +29,7 @@ const SignUp = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:8000/auth/signup", {method: 'POST', headers: {'Content-Type': 'application/json'},body: JSON.stringify(SignUp)});
+      const res = await fetch("https://authentication-app-api-rouge.vercel.app/signup", {method: 'POST', headers: {'Content-Type': 'application/json'},body: JSON.stringify(SignUp)});
       const result = await res.json();
       const {success,message,error} = result
       if(success){
